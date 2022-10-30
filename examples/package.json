@@ -10,6 +10,6 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@qs/utils": "workspace:^1.0.0"
+    "@zclzone/utils": "workspace:^0.0.1"
   }
 }

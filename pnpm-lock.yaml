@@ -20,9 +20,12 @@ importers:
 
   examples:
     specifiers:
-      '@qs/utils': workspace:^1.0.0
+      '@zclzone/utils': workspace:^0.0.1
     dependencies:
-      '@qs/utils': link:../packages/utils
+      '@zclzone/utils': link:../packages/utils
+
+  packages/utils:
+    specifiers: {}
 
 packages:
 
