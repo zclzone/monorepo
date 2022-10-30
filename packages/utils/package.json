@@ -1,5 +1,5 @@
 {
-  "name": "@qs/utils",
+  "name": "@zclzone/utils",
   "version": "0.0.1",
   "scripts": {
     "build": "vite build"
