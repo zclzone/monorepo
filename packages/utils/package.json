@@ -1,14 +1,24 @@
 {
   "name": "@zclzone/utils",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "scripts": {
     "build": "vite build"
   },
-  "main": "./dist/lib/index.js",
-  "module": "./dist/es/index.js",
-  "files": ["dist"],
-  "keywords": ["utils"],
+  "main": "dist/cjs/index.js",
+  "module": "dist/es/index.js",
+  "files": [
+    "dist"
+  ],
+  "keywords": [
+    "utils"
+  ],
   "author": "Ronnie Zhang",
   "description": "使用 monorepo 搭建的工具函数",
-  "license": "MIT"
+  "license": "MIT",
+  "dependencies": {
+    "crypto-js": "^4.1.1"
+  },
+  "devDependencies": {
+    "@types/crypto-js": "^4.1.1"
+  }
 }

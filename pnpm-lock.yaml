@@ -25,7 +25,13 @@ importers:
       '@zclzone/utils': link:../packages/utils
 
   packages/utils:
-    specifiers: {}
+    specifiers:
+      '@types/crypto-js': ^4.1.1
+      crypto-js: ^4.1.1
+    dependencies:
+      crypto-js: 4.1.1
+    devDependencies:
+      '@types/crypto-js': 4.1.1
 
 packages:
 
@@ -174,6 +180,10 @@ packages:
 
   /@types/argparse/1.0.38:
     resolution: {integrity: sha512-ebDJ9b0e702Yr7pWgB0jzm+CX4Srzz8RcXtLJDJB+BSccqMa36uyH/zUsSYao5+BD1ytv3k3rPYCq4mAE1hsXA==}
+    dev: true
+
+  /@types/crypto-js/4.1.1:
+    resolution: {integrity: sha512-BG7fQKZ689HIoc5h+6D2Dgq1fABRa0RbBWKBd9SP/MVRVXROflpm5fhwyATX5duFmbStzyzyycPB8qUYKDH3NA==}
     dev: true
 
   /@types/node/12.20.24:
@@ -326,6 +336,10 @@ packages:
     dependencies:
       is-what: 3.14.1
     dev: true
+
+  /crypto-js/4.1.1:
+    resolution: {integrity: sha512-o2JlM7ydqd3Qk9CA0L4NL6mTzU2sdx96a+oOfPu8Mkl/PK51vSyoi8/rQ8NknZtk44vq15lmhAj9CIAGwgeWKw==}
+    dev: false
 
   /csstype/2.6.21:
     resolution: {integrity: sha512-Z1PhmomIfypOpoMjRQB70jfvy/wxT50qW08YXO5lMIJkrdq4yOTR+AW7FqutScmB9NkLwxo+jU+kZLbofZZq/w==}
