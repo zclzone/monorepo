@@ -70,7 +70,7 @@ export default function ({ name, initForm = {}, doCreate, doDelete, doUpdate, re
   /** 删除 */
   function handleDelete(id, confirmOptions) {
     if (!id && id !== 0) return
-    $dialog.warn({
+    $dialog.warning({
       content: '确定删除？',
       title: '提示',
       positiveText: '确定',
