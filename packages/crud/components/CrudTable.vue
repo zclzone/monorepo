@@ -17,7 +17,7 @@
 </template>
 
 <script setup>
-import { ref, reactive } from 'vue'
+import { ref, reactive, nextTick } from 'vue'
 import { NDataTable } from 'naive-ui'
 import QueryBar from './QueryBar.vue'
 
