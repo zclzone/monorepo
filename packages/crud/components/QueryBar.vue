@@ -12,5 +12,6 @@
 </template>
 
 <script setup>
+import { NSpace, NButton } from 'naive-ui'
 const emit = defineEmits(['search', 'reset'])
 </script>

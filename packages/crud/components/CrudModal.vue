@@ -14,6 +14,7 @@
 
 <script setup>
 import { computed } from 'vue'
+import { NModal, NButton } from 'naive-ui'
 
 const props = defineProps({
   width: {
