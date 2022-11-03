@@ -70,9 +70,12 @@ export default function ({ name, initForm = {}, doCreate, doDelete, doUpdate, re
   /** 删除 */
   function handleDelete(id, confirmOptions) {
     if (!id && id !== 0) return
-    $dialog.confirm({
+    $dialog.warn({
       content: '确定删除？',
-      async confirm() {
+      title: '提示',
+      positiveText: '确定',
+      negativeText: '取消',
+      async onPositiveClick() {
         try {
           modalLoading.value = true
           const data = await doDelete(id)
