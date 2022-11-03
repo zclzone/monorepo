@@ -73,15 +73,12 @@ importers:
   packages/crud:
     specifiers:
       '@vitejs/plugin-vue': ^3.2.0
-      '@zclzone/utils': workspace:^0.0.3
       unocss: ^0.46.1
       vite: ^3.2.0
       vue: ^3.2.41
-    dependencies:
-      '@zclzone/utils': link:../utils
-      unocss: 0.46.1_vite@3.2.1
     devDependencies:
       '@vitejs/plugin-vue': 3.2.0_vite@3.2.1+vue@3.2.41
+      unocss: 0.46.1_vite@3.2.1
       vite: 3.2.1
       vue: 3.2.41
 
@@ -403,7 +400,6 @@ packages:
     transitivePeerDependencies:
       - rollup
       - vite
-    dev: false
 
   /@unocss/cli/0.46.1:
     resolution: {integrity: sha512-lMV1o3+PskSvLaBZbjHKf+KmSN8W42Je0oZEQL4+zgNTstISrdNdByHQTkBDYW6NU4HfURjs8wPlsKYox8wTMA==}
@@ -551,7 +547,6 @@ packages:
       vite: 3.2.1
     transitivePeerDependencies:
       - rollup
-    dev: false
 
   /@vitejs/plugin-vue/3.1.2_vite@3.1.8+vue@3.2.36:
     resolution: {integrity: sha512-3zxKNlvA3oNaKDYX0NBclgxTQ1xaFdL7PzwF6zj9tGFziKwmBa3Q/6XcJQxudlT81WxDjEhHmevvIC4Orc1LhQ==}
@@ -1995,7 +1990,6 @@ packages:
       - rollup
       - supports-color
       - vite
-    dev: false
 
   /unplugin-auto-import/0.11.4:
     resolution: {integrity: sha512-lh/bRDRYwgnb9Cm5ur8TlTMGxA1GRZvgzCvBIf0vyuVRy7ebWcWefFElpUDpr8vLl+ZRGsPVCOGiYJ8TCR625Q==}

@@ -69,7 +69,7 @@ export default function ({ name, initForm = {}, doCreate, doDelete, doUpdate, re
 
   /** 删除 */
   function handleDelete(id, confirmOptions) {
-    if (isNullOrWhitespace(id)) return
+    if (!id && id !== 0) return
     $dialog.confirm({
       content: '确定删除？',
       async confirm() {
