@@ -73,7 +73,7 @@ importers:
   packages/crud:
     specifiers:
       '@vitejs/plugin-vue': ^3.2.0
-      '@zclzone/utils': workspace:^0.0.2
+      '@zclzone/utils': workspace:^0.0.3
       unocss: ^0.46.1
       vite: ^3.2.0
       vue: ^3.2.41
