@@ -1,9 +1,9 @@
 <template>
   <div flex items-center>
-    <label v-if="!isNullOrWhitespace(label)" w-80 flex-shrink-0 :style="{ width: labelWidth + 'px' }">
+    <label v-if="!isNullOrWhitespace(label)" class="item-label" :style="{ width: labelWidth + 'px' }">
       {{ label }}
     </label>
-    <div :style="{ width: contentWidth + 'px' }" flex-shrink-0>
+    <div :style="{ width: contentWidth + 'px' }" class="item-content">
       <slot />
     </div>
   </div>
@@ -31,3 +31,19 @@ defineProps({
   },
 })
 </script>
+
+<style lang="scss" scoped>
+.qs_query-bar-item {
+  display: flex;
+  align-items: center;
+
+  .item-label {
+    width: 80px;
+    flex-shrink: 0;
+  }
+
+  .item-content {
+    flex-shrink: 0;
+  }
+}
+</style>

@@ -2,10 +2,10 @@
   <n-modal v-model:show="show" :style="{ width }" preset="card" :title="title" size="huge" :bordered="false">
     <slot />
     <template v-if="showFooter" #footer>
-      <footer flex justify-end>
+      <footer style="display: flex; justify-content: end">
         <slot name="footer">
           <n-button @click="show = false">取消</n-button>
-          <n-button :loading="loading" ml-20 type="primary" @click="emit('onSave')">保存</n-button>
+          <n-button :loading="loading" style="margin-left: 20px" type="primary" @click="emit('onSave')">保存</n-button>
         </slot>
       </footer>
     </template>

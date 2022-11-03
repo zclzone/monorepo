@@ -49,6 +49,7 @@ importers:
     specifiers:
       '@vitejs/plugin-vue': ^3.2.0
       '@zclzone/utils': workspace:^0.0.2
+      scss: ^0.2.4
       typescript: ^4.6.4
       unplugin-auto-import: ^0.11.4
       unplugin-vue-components: ^0.22.9
@@ -64,6 +65,7 @@ importers:
       vue: 3.2.41
     devDependencies:
       '@vitejs/plugin-vue': 3.2.0_vite@3.2.1+vue@3.2.41
+      scss: 0.2.4
       typescript: 4.8.4
       vite: 3.2.1
       vue-tsc: 1.0.9_typescript@4.8.4
@@ -1581,6 +1583,11 @@ packages:
       ufo: 0.8.6
       undici: 5.12.0
 
+  /ometa/0.2.2:
+    resolution: {integrity: sha512-LZuoK/yjU3FvrxPjUXUlZ1bavCfBPqauA7fsNdwi+AVhRdyk2IzgP3JRnevvjzQ6fKHdUw8YISshf53FmpHrng==}
+    engines: {node: '>= 0.2.0'}
+    dev: true
+
   /onetime/5.1.2:
     resolution: {integrity: sha512-kbpaSSGJTWdAY5KPVeMOKXSrPtr8C8C7wodJbcsd51jRnmD+GZu8Y0VoU6Dm5Z4vWr0Ig/1NKuWRKf7j5aaYSg==}
     engines: {node: '>=6'}
@@ -1736,6 +1743,13 @@ packages:
     resolution: {integrity: sha512-NqVDv9TpANUjFm0N8uM5GxL36UgKi9/atZw+x7YFnQ8ckwFGKrl4xX4yWtrey3UJm5nP1kUbnYgLopqWNSRhWw==}
     dev: true
     optional: true
+
+  /scss/0.2.4:
+    resolution: {integrity: sha512-4u8V87F+Q/upVhUmhPnB4C1R11xojkRkWjExL2v0CX2EXTg18VrKd+9JWoeyCp2VEMdSpJsyAvVU+rVjogh51A==}
+    engines: {node: '>= 0.2.0'}
+    dependencies:
+      ometa: 0.2.2
+    dev: true
 
   /scule/0.3.2:
     resolution: {integrity: sha512-zIvPdjOH8fv8CgrPT5eqtxHQXmPNnV/vHJYffZhE43KZkvULvpCTvOt1HPlFaCZx287INL9qaqrZg34e8NgI4g==}

@@ -1,10 +1,10 @@
 <template>
-  <div min-h-60 p-15 flex items-start justify-between b-1 bc-ccc rounded-8 bg="#fafafc">
+  <div class="qs_query-bar">
     <n-space wrap :size="[35, 15]">
       <slot />
     </n-space>
 
-    <div flex-shrink-0>
+    <div style="flex-shrink: 0">
       <n-button secondary type="primary" @click="emit('reset')">重置</n-button>
       <n-button ml-20 type="primary" @click="emit('search')">搜索</n-button>
     </div>
@@ -17,3 +17,17 @@ defineOptions({
 })
 const emit = defineEmits(['search', 'reset'])
 </script>
+
+<style scoped lang="scss">
+.qs_query-bar {
+  min-height: 60px;
+  padding: 15px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+  background: #fafafc;
+}
+</style>
