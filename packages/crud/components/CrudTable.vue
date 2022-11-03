@@ -18,6 +18,7 @@
 
 <script setup>
 import { ref, reactive } from 'vue'
+import QueryBar from './QueryBar.vue'
 
 const props = defineProps({
   /**
