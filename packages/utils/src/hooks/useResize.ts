@@ -1,17 +1,23 @@
-import type {App} from 'vue'
+import type { App } from 'vue'
 
-function useResize(el:HTMLElement, cb: Function) {
-  const resize = new ResizeObserver((entries) => {
+function useResize(el: HTMLElement, cb: Function) {
+  const observer = new ResizeObserver((entries) => {
     cb(entries[0].contentRect)
   })
-  resize.observe(el)
+  observer.observe(el)
+  return observer
 }
 
 const install = (app: App) => {
+  let observer: ResizeObserver
+
   app.directive('resize', {
     mounted(el, binding) {
-      useResize(el, binding.value)
-    }
+      observer = useResize(el, binding.value)
+    },
+    beforeUnmount() {
+      observer?.disconnect()
+    },
   })
 }
 
