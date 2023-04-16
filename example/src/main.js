@@ -4,5 +4,6 @@ import '@/styles/global.scss'
 
 import { createApp } from 'vue'
 import App from './App.vue'
+import { useResize } from '@zclzone/utils'
 
-createApp(App).mount('#app')
+createApp(App).use(useResize).mount('#app')

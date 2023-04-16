@@ -1,8 +1,11 @@
 <script setup>
-import { CrudTable } from '@zclzone/components'
-import { useCRUD } from '@zclzone/components'
+function onResize(o) {
+  console.log(o)
+}
 </script>
 
 <template>
-  <CrudTable></CrudTable>
+  <div class="flex wh-full f-c-c">
+    <div v-resize="onResize" ref="$resizeRef" class="w-200 h-200 resize b-1 bc-ccc overflow-hidden">测试useResize</div>
+  </div>
 </template>
