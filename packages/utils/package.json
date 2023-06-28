@@ -1,12 +1,6 @@
 {
   "name": "@zclzone/utils",
-  "version": "0.0.10",
-  "description": "使用 monorepo 搭建的工具函数",
-  "keywords": [
-    "utils"
-  ],
-  "license": "MIT",
-  "author": "Ronnie Zhang",
+  "version": "0.0.12",
   "main": "dist/index.umd.js",
   "module": "dist/index.mjs",
   "files": [
