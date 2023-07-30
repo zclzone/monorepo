@@ -1,12 +1,15 @@
 {
   "name": "@zclzone/crud",
-  "version": "0.0.13",
+  "version": "0.0.14",
   "type": "module",
   "main": "index.js",
   "scripts": {
-    "dev": "vite",
     "build": "vite build",
+    "dev": "vite",
     "preview": "vite preview"
+  },
+  "dependencies": {
+    "xlsx": "^0.18.5"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^3.2.0",
@@ -16,8 +19,5 @@
   },
   "peerDependencies": {
     "naive-ui": "^2.33.5"
-  },
-  "dependencies": {
-    "xlsx": "^0.18.5"
   }
 }
