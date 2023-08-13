@@ -9,7 +9,10 @@ const ACTIONS = {
 export default function ({ name, initForm = {}, doCreate, doDelete, doUpdate, refresh }) {
   const modalVisible = ref(false)
   const modalAction = ref('')
-  const modalTitle = computed(() => ACTIONS[modalAction.value] + name)
+  const customTitle = ref('')
+  const modalTitle = computed(() =>
+    ACTIONS[modalAction.value] ? ACTIONS[modalAction.value] + name : customTitle.value
+  )
   const modalLoading = ref(false)
   const modalFormRef = ref(null)
   const modalForm = ref({ ...initForm })
@@ -35,6 +38,15 @@ export default function ({ name, initForm = {}, doCreate, doDelete, doUpdate, re
     modalForm.value = { ...row }
   }
 
+  function handleOpen(action = {}, row) {
+    modalAction.value = action.value
+    if (!Object.keys(ACTIONS).includes(action.value)) {
+      customTitle.value = action.name
+    }
+    modalVisible.value = true
+    modalForm.value = { ...row }
+  }
+
   /** 保存 */
   function handleSave() {
     if (!['edit', 'add'].includes(modalAction.value)) {
@@ -50,7 +62,7 @@ export default function ({ name, initForm = {}, doCreate, doDelete, doUpdate, re
         },
         edit: {
           api: () => doUpdate(modalForm.value),
-          cb: () => $message.success('编辑成功'),
+          cb: () => $message.success('保存成功'),
         },
       }
       const action = actions[modalAction.value]
@@ -99,6 +111,7 @@ export default function ({ name, initForm = {}, doCreate, doDelete, doUpdate, re
     handleDelete,
     handleEdit,
     handleView,
+    handleOpen,
     handleSave,
     modalForm,
     modalFormRef,
