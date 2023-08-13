@@ -48,8 +48,8 @@ export default function ({ name, initForm = {}, doCreate, doDelete, doUpdate, re
   }
 
   /** 保存 */
-  function handleSave(action = {}) {
-    if (!['edit', 'add'].includes(modalAction.value) && !action?.api) {
+  function handleSave(customAction = {}) {
+    if (!['edit', 'add'].includes(modalAction.value) && !customAction?.api) {
       modalVisible.value = false
       return
     }
@@ -65,7 +65,7 @@ export default function ({ name, initForm = {}, doCreate, doDelete, doUpdate, re
           cb: () => $message.success('保存成功'),
         },
       }
-      const action = actions[modalAction.value] || action
+      const action = actions[modalAction.value] || customAction
 
       try {
         modalLoading.value = true
